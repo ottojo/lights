@@ -45,7 +45,7 @@ func SetMateLightAnimation(animation MateLightAnimation) {
 func SetMateLightPixel(x, y int, c Color) {
 	sendMqtt("/lights/mateLight/pixel", []byte{
 		byte(x), byte(y),
-		byte(c.R * 256), byte(c.G * 256), byte(c.B * 256)})
+		byte(c.R * 255), byte(c.G * 255), byte(c.B * 255)})
 }
 
 func SetMateLightAll(c Color) {
