@@ -14,4 +14,7 @@ func init() {
 func SetAll(c Color) {
 	SetWindowLedStrip(c)
 	SetMateLightAll(c)
+	for i := 0; i < 41; i++ {
+		SetNeoPixel(i, c)
+	}
 }
